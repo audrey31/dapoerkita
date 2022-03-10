@@ -1,0 +1,44 @@
+h1 {
+    font-weight: 600;
+    text-align: center;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* margin: 3% 2%; */
+    margin: 12% 2%;
+}
+
+.forms {
+    margin-top: 2rem;
+}
+
+form {
+    width: 80%;
+}
+
+.button {
+    margin-top: 2rem;
+}
+
+.text-field {
+    background-color: #F1F4FA;
+    border-radius: 10px;
+}
+
+.register-text {
+    margin-top: 2rem;
+}
+
+.link-text {
+    color: '#6D9BF3';
+}
+
+@media only screen and (min-width: 600px) {
+    .wrapper {
+        margin: 3% 20%;
+    }
+}

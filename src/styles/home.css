@@ -1,0 +1,32 @@
+.wrapper-home {
+    margin: 5% 5%;
+}
+
+.profile-spoiler {
+    display: flex;
+    align-items: center;
+    
+}
+
+.profile-notification {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-logo {
+    margin-right: 0.5rem;
+}
+
+.text-normal {
+    font-weight: 600;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.home-suggestion {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
