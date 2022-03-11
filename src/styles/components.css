@@ -104,16 +104,64 @@
 /* BloggerCard.js */
 
 .box-shadow {
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    box-shadow: 0 3px 10px #00000033;
     border-radius: 5px;
 }
 
-/* start of Navbar.js */
-.navbar {
+/* start of Market.js */
+/* .navbar {
     overflow: hidden;
     position: fixed;
     bottom: 0;
     width: 100%;
     height: 30px;
+} */
+
+.market-card {
+    width: 150px;
+    display: inline;
 }
 
+.market-text {
+    text-align:start;
+}
+
+.market-info {
+    display: flex;
+    height: 2rem;
+    align-items: center;
+    justify-content: start;
+    align-items: center;
+}
+
+.market-desc {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 4% 3%;
+}
+
+.info-desc {
+    margin-left: 10px;
+}
+
+.wrapper-info {
+    display: flex;
+}
+
+.grey {
+    color: #797979;
+}
+
+.blogger-desc > img{
+    width: 95%;
+    align-self: center;
+}
+
+/* end of Market.js */
+
+/* start of MarketView.js */
+.marketview-wrapper {
+    margin: 3% 2%;
+}
+/* end of MarketView.js */

@@ -22,12 +22,12 @@ const Home = () => {
                 <div className='notification'><NotificationsIcon /></div>
             </div>
             <CustomSearch />
-            <SectionDivider title='Berdasarkan pencarianmu' urlLink=''/>
+            <SectionDivider title='Berdasarkan pencarianmu' urlLink='market-list' seeAll='Lihat semua'/>
             <div className='home-suggestion'>
                 <FoodCard />
                 <FoodCard />
             </div>
-            <SectionDivider title='Food Blogger' urlLink='blog-list'/>
+            <SectionDivider title='Food Blogger' urlLink='blog-list' seeAll='Lihat semua' />
             <div className='blogger-section'>
                 <BloggerCard />
                 <BloggerCard />

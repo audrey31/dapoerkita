@@ -1,0 +1,9 @@
+.wrapper-market {
+    margin: 5% 5%;
+}
+
+.wrapper-market > h1 {
+    text-align: start;
+    font-weight: 600;
+    font-size: 1.7rem; 
+}

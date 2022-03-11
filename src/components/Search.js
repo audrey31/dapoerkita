@@ -1,12 +1,8 @@
 import * as React from 'react';
 import '../styles/components.css';
-// import { FormControl, InputAdornment, InputLabel, OutlinedInput, IconButton } from '@mui/material';
-// import { Search } from '@mui/icons-material';
 import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
-
 import IconButton from '@mui/material/IconButton';
-
 import SearchIcon from '@mui/icons-material/Search';
 
 
