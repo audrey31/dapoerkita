@@ -161,7 +161,156 @@
 /* end of Market.js */
 
 /* start of MarketView.js */
+.comments {
+    margin-top: 10px;
+}
+
 .marketview-wrapper {
     margin: 3% 2%;
 }
+
+.marketview-wrapper > h1 {
+    font-size: 2rem;
+}
+
+.marketview-mini {
+    display: flex;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+    margin: 3% 2%;
+}
+
+.marketview-mini .mini-wrapper > img {
+    width: 7%;
+    margin: 0.3rem;
+    margin-right: 1rem;
+}
+
+.marketview-mini > img {
+    width: 5%;
+    margin-right: 1rem;
+}
+
+.mini-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marketview-mini-text {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.best-seller{
+    margin-top: 10px;
+}
 /* end of MarketView.js */
+
+/* start of MenuCard.js */
+.menucard-wrapper {
+    display: flex;
+    margin-top: .8rem;
+}
+
+.menucard-wrapper > img {
+    width: 25%;
+}
+
+.menucard-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+.nama-makanan {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.harga-makanan {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.funfact {
+    color: #757575;
+    font-size: .80rem;
+}
+/* end of MenuCard.js */
+
+/* start of MenuInfo.js */
+.rating-value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-info {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: #C4C4C4;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: .7rem;
+    align-items: center;
+    height: 3rem;
+}
+
+.menu-info-text {
+    font-weight: 400;
+    font-size: 0.55rem;
+}
+
+.rating-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.distance-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.discount-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rating-value > img {
+    width: 15px;
+}
+
+.distance-value > img {
+    width: 15px;
+}
+
+.discount-value > img {
+    width: 15px;
+}
+
+.time-value > img {
+    width: 15px;
+}
+
+.time-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* end of MenuInfo.js */
+
+/* start of Comments.js */
+.comments-card {
+    width: 150px;
+    display: inline;
+}
+/* end of Comments.js */
