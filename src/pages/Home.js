@@ -8,7 +8,6 @@ import SectionDivider from "../components/SectionDivider";
 import BloggerCard from "../components/BloggerCard";
 import Navbar from "../components/Navbar";
 import { useAuth } from "../config/Auth";
-import dapoerAPI from "../config/api";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
