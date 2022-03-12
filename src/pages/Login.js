@@ -12,12 +12,19 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import dapoerAPI from "../config/api";
 import { useAuth } from "../config/Auth";
+import { Alert } from "@mui/material";
+import { useLocation } from "react-router-dom";
 
 const Login = () => {
+  let location = useLocation();
   const { setAndGetTokens } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
+  // console.log(location.state.success);
+  // let isRegisterSuccess = location.state.success === null;
+  const [isRegisterSuccess, setIsRegisterSuccess] = useState(true);
+
+  let navigate = useNavigate();
   const [values, setValues] = useState({
     password: "",
     showPassword: false,
@@ -57,6 +64,7 @@ const Login = () => {
         navigate("/home", { replace: true });
       })
       .catch(function (error) {
+        setIsRegisterSuccess(false);
         console.log(error);
       });
   };
@@ -108,6 +116,13 @@ const Login = () => {
           </FormControl>
         </div>
       </form>
+      {isRegisterSuccess ? (
+        <></>
+      ) : (
+        <div className="edit-margin-top">
+          <Alert severity="error">Login gagal...</Alert>
+        </div>
+      )}
       <div className="button">
         <Button
           variant="contained"

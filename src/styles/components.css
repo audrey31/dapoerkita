@@ -335,3 +335,33 @@
     margin-left: 5px;
 }
 /* end of RateUs.js */
+
+/* start of Profile.js */
+.wrapper-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50% 10% 0 10%;
+}
+
+
+/* end of Profile.js */
+
+/* start of editProfile.js */
+.wrapper-edit-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20% 10% 0 10%;
+}
+
+.edit-margin {
+    margin-bottom: 20px;
+}
+
+.edit-margin-top {
+    margin-top: 20px;
+}
+/* end of editProfile.js */

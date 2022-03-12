@@ -12,6 +12,8 @@ import MarketDetail from "./pages/MarketDetail";
 import { AuthContext } from "./config/Auth";
 import { useState } from "react";
 import { PrivateRoute, RestrictedRoute } from "./config/PrivateRoute";
+import Profile from "./pages/Profile";
+import EditProfile from "./components/EditProfile";
 
 function App() {
   const THEME = createTheme({
@@ -34,6 +36,14 @@ function App() {
         <Router>
           <Routes>
             <Route
+              path="/profile"
+              element={
+                <PrivateRoute>
+                  <Profile />
+                </PrivateRoute>
+              }
+            />
+            <Route
               path="/login"
               element={
                 <RestrictedRoute>
@@ -50,18 +60,18 @@ function App() {
               }
             />
             <Route
-              path="/"
-              element={
-                <PrivateRoute>
-                  <Home />
-                </PrivateRoute>
-              }
-            />
-            <Route
               path="/blog-list"
               element={
                 <PrivateRoute>
                   <FoodBlogList />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/edit-profile"
+              element={
+                <PrivateRoute>
+                  <EditProfile />
                 </PrivateRoute>
               }
             />
@@ -86,6 +96,15 @@ function App() {
               element={
                 <PrivateRoute>
                   <MarketDetail />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              exact
+              path="/home"
+              element={
+                <PrivateRoute>
+                  <Home />
                 </PrivateRoute>
               }
             />

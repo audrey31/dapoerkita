@@ -60,6 +60,7 @@ const Home = () => {
             <SectionDivider
               title="Berdasarkan pencarianmu"
               urlLink="market-list"
+              
               seeAll="Lihat semua"
             />
             <div className="home-suggestion">

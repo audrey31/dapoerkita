@@ -11,8 +11,8 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const CustomSearch = (props) => {
-  const [category, setCategory] = useState("");
-  const [searchText, setSearchText] = useState("");
+  const [category, setCategory] = useState("kategori");
+  const [searchText, setSearchText] = useState("ayam");
   let navigate = useNavigate();
 
   const moveData = () => {

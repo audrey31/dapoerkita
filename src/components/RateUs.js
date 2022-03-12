@@ -9,7 +9,7 @@ const RateUs = ({ idToko }) => {
   const [rating, setRating] = useState(2);
   const [message, setMessage] = useState("");
   console.log(typeof rating);
-  console.log(rating)
+  console.log(rating);
 
   const handleOnClick = (e) => {
     e.preventDefault();
@@ -37,24 +37,23 @@ const RateUs = ({ idToko }) => {
   };
 
   return (
-      <>
-    <div className="wrapper-rating">
-      <Stack spacing={1}>
-        <Rating name="size-large" defaultValue={0} onChange={(e) => setRating(parseInt(e.target.value))} size="large" />
-      </Stack>
-      <div className="button-rate">
-        <Button variant="contained" size="small" onClick={handleOnClick}>
-          Send
-        </Button>
+    <>
+      <div className="wrapper-rating">
+        <Stack spacing={1}>
+          <Rating
+            name="size-large"
+            defaultValue={0}
+            onChange={(e) => setRating(parseInt(e.target.value))}
+            size="large"
+          />
+        </Stack>
+        <div className="button-rate">
+          <Button variant="contained" size="small" onClick={handleOnClick}>
+            Send
+          </Button>
+        </div>
       </div>
-    </div>
-    {
-          message ? (
-              <div className="rating-message">{message}</div>
-          ) : (
-              <></>
-          )
-      }
+      {message ? <div className="rating-message">{message}</div> : <></>}
     </>
   );
 };

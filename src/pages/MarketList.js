@@ -9,17 +9,21 @@ import { useLocation } from "react-router-dom";
 
 const MarketList = () => {
   const location = useLocation();
-  console.log(location.state.teks);
-  console.log(location.state.kategori);
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+//   console.log(location.state.kategori)
+//   console.log(location.state.teks)
+
+    
+    const isAnyKategori = location.state.kategori === null
+    const isAnyTeks = location.state.teks === null ? `` : (isAnyKategori === null ? ``: `search?${location.state.kategori}=${location.state.teks}`)
 
   useEffect(() => {
     var axios = require("axios");
 
     var config = {
       method: "get",
-      url: `https://f191-125-166-13-9.ngrok.io/toko/search?${location.state.kategori}=${location.state.teks}`,
+      url: `https://f191-125-166-13-9.ngrok.io/toko/${isAnyTeks}`,
       headers: {},
     };
 

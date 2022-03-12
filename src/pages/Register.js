@@ -7,14 +7,17 @@ import InputLabel from "@mui/material/InputLabel";
 import InputAdornment from "@mui/material/InputAdornment";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/login.css";
+import { Alert } from "@mui/material";
 
 const Register = () => {
   const [nama, setNama] = useState("");
   const [email, setEmail] = useState("");
   const [noTelp, setNoTelp] = useState("");
   const [password, setPassword] = useState("");
+  const [isRegistration, setIsRegistration] = useState(true);
+  let navigate = useNavigate();
 
   const handleRegister = () => {
     var axios = require("axios");
@@ -34,9 +37,13 @@ const Register = () => {
 
     axios(config)
       .then(function (response) {
-        console.log(JSON.stringify(response.data));
+        navigate(
+          "/login",
+          { replace: true }
+        );
       })
       .catch(function (error) {
+        setIsRegistration(false);
         console.log(error);
       });
   };
@@ -128,6 +135,13 @@ const Register = () => {
           </FormControl>
         </div>
       </form>
+      <div className="edit-margin-top">
+      {isRegistration ? (
+        <></>
+      ) : (
+        <Alert severity="error">Pendaftaran gagal...</Alert>
+      )}
+      </div>
       <div className="button">
         <Button
           variant="contained"
