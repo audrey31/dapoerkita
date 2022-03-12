@@ -5,6 +5,7 @@ const ArticleList = () => {
     return ( 
         <>
         <ArticleNav />
+        
         <Navbar />
         </>
      );
