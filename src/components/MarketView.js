@@ -29,6 +29,7 @@ const MarketView = ({ toko, menu, funfact, rating, komentar, idToko }) => {
         <SectionDivider title="Penawaran Hari Ini" />
         {menu.map((makanan) => (
           <MenuCard
+            gambar={makanan.gambar}
             makanan={makanan.nama}
             harga={makanan.harga}
             funfact={funfact}
@@ -39,6 +40,7 @@ const MarketView = ({ toko, menu, funfact, rating, komentar, idToko }) => {
           <SectionDivider title="Best Seller" />
           {menu.map((makanan) => (
             <MenuCard
+              gambar={makanan.gambar}
               makanan={makanan.nama}
               harga={makanan.harga}
               funfact={funfact}
@@ -47,15 +49,15 @@ const MarketView = ({ toko, menu, funfact, rating, komentar, idToko }) => {
           ))}
         </div>
         <div className="rate-us">
-        <SectionDivider title="Rate us" />
-        <RateUs idToko={idToko} />
+          <SectionDivider title="Rate us" />
+          <RateUs idToko={idToko} />
         </div>
         <div className="comments">
-        <SectionDivider title="Ulasan" />
-        {komentar.map((komen) => (
-          <Comments key={komen.id} komentar={komen.teks} />
-        ))}
-        <ChatBar idToko={idToko}/>
+          <SectionDivider title="Ulasan" />
+          {komentar.map((komen) => (
+            <Comments key={komen.id} komentar={komen.teks} />
+          ))}
+          <ChatBar idToko={idToko} />
         </div>
       </div>
       <Navbar />

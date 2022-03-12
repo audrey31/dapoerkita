@@ -1,7 +1,7 @@
-const MenuCard = ({makanan, funfact, harga}) => {
+const MenuCard = ({gambar, makanan, funfact, harga}) => {
     return ( 
         <div className="menucard-wrapper">
-                <img src="https://cdn.discordapp.com/attachments/807279199429197845/951823347363233792/unknown.png"></img>
+                <img src={`${gambar}`}></img>
                 <div className="menucard-item">
                     <div className="nama-makanan">{makanan}</div>
                     <div className="funfact">{funfact}</div>

@@ -22,7 +22,7 @@ const Navbar = () => {
                 }}>
                 <BottomNavigationAction icon={<HomeIcon />}
                 component={Link}
-                to='/home'
+                to='/'
                 />
                 <BottomNavigationAction icon={<VideocamIcon />} 
                 component={Link}

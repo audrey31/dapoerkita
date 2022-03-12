@@ -3,7 +3,11 @@
 }
 
 .wrapper-market > h1 {
-    text-align: start;
+    text-align: center;
     font-weight: 600;
     font-size: 1.7rem; 
+}
+
+.wrapper-market-info {
+    margin-top: 10px;
 }

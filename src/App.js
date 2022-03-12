@@ -11,6 +11,7 @@ import MarketList from "./pages/MarketList";
 import MarketDetail from "./pages/MarketDetail";
 import { AuthContext } from "./config/Auth";
 import { useState } from "react";
+import { PrivateRoute, RestrictedRoute } from "./config/PrivateRoute";
 
 function App() {
   const THEME = createTheme({
@@ -32,17 +33,66 @@ function App() {
       <ThemeProvider theme={THEME}>
         <Router>
           <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/blog-list" element={<FoodBlogList />} />
-            <Route path="/article-list" element={<ArticleList />} />
-            <Route path="/market-list" element={<MarketList />} />
-            <Route path="/market-list/toko/:id" element={<MarketDetail />} />
+            <Route
+              path="/login"
+              element={
+                <RestrictedRoute>
+                  <Login />
+                </RestrictedRoute>
+              }
+            />
+            <Route
+              path="/register"
+              element={
+                <RestrictedRoute>
+                  <Register />
+                </RestrictedRoute>
+              }
+            />
+            <Route
+              path="/"
+              element={
+                <PrivateRoute>
+                  <Home />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/blog-list"
+              element={
+                <PrivateRoute>
+                  <FoodBlogList />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/article-list"
+              element={
+                <PrivateRoute>
+                  <ArticleList />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/market-list"
+              element={
+                <PrivateRoute>
+                  <MarketList />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/market-list/toko/:id"
+              element={
+                <PrivateRoute>
+                  <MarketDetail />
+                </PrivateRoute>
+              }
+            />
           </Routes>
         </Router>
       </ThemeProvider>
-     </AuthContext.Provider>
+    </AuthContext.Provider>
   );
 }
 
