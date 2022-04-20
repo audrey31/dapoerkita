@@ -44,6 +44,7 @@ function App() {
               }
             />
             <Route
+            exact
               path="/login"
               element={
                 <RestrictedRoute>
@@ -78,9 +79,9 @@ function App() {
             <Route
               path="/article-list"
               element={
-                <PrivateRoute>
+                
                   <ArticleList />
-                </PrivateRoute>
+                
               }
             />
             <Route
@@ -100,7 +101,6 @@ function App() {
               }
             />
             <Route
-              exact
               path="/home"
               element={
                 <PrivateRoute>

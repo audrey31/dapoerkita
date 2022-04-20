@@ -23,7 +23,7 @@ const MarketList = () => {
 
     var config = {
       method: "get",
-      url: `https://f191-125-166-13-9.ngrok.io/toko/${isAnyTeks}`,
+      url: `https://2f9d-125-166-13-9.ngrok.io/toko/${isAnyTeks}`,
       headers: {},
     };
 

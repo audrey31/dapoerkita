@@ -20,7 +20,7 @@ const Home = () => {
 
     var config = {
       method: "get",
-      url: "https://f191-125-166-13-9.ngrok.io/user",
+      url: "https://2f9d-125-166-13-9.ngrok.io/user",
       headers: {
         Authorization: `Bearer ${authToken}`,
       },

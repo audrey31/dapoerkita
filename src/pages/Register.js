@@ -30,7 +30,7 @@ const Register = () => {
 
     var config = {
       method: "post",
-      url: "https://f191-125-166-13-9.ngrok.io/user/register",
+      url: "https://2f9d-125-166-13-9.ngrok.io/user/register",
       headers: {},
       data: data,
     };

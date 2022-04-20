@@ -18,7 +18,7 @@ const MarketDetail = () => {
 
     var config = {
       method: "get",
-      url: `https://f191-125-166-13-9.ngrok.io/toko/${id}`,
+      url: `https://2f9d-125-166-13-9.ngrok.io/toko/${id}`,
       headers: {},
     };
 

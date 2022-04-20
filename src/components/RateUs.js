@@ -18,7 +18,7 @@ const RateUs = ({ idToko }) => {
 
     var config = {
       method: "post",
-      url: `https://f191-125-166-13-9.ngrok.io/toko/${idToko}/rating`,
+      url: `https://2f9d-125-166-13-9.ngrok.io/toko/${idToko}/rating`,
       headers: {
         Authorization: `Bearer ${authToken}`,
       },
